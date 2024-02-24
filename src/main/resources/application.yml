@@ -1,0 +1,17 @@
+info:
+  app:
+    name: sales-api
+    description: Sales API
+    tag: '@project.version@'
+
+server:
+  port: 8080
+  servlet:
+    context-path: /sales-management-api
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: archaius,auditevents,beans,caches,caches-cache,conditions,configprops,bus-env,bus-env-destination,bus-refresh,bus-refresh-destination,env-toMatch,env,integrationgraph,loggers,loggers-name,heapdump,threaddump,metrics-requiredMetricName,scheduledtasks,httptrace,mappings,refresh,features,bindings-name,bindings,channels,consul
