@@ -19,7 +19,7 @@ spring:
           lob:
             non_contextual_creation: true
         hbm2ddl:
-          auto: create
+          auto: validate
     generate-ddl: true
     hibernate:
       ddl-auto: none

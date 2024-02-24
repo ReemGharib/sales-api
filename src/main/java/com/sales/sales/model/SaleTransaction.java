@@ -1,5 +1,6 @@
 package com.sales.sales.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +27,8 @@ public class SaleTransaction {
     private double price;
 
     @ManyToOne
-    @JoinColumn(name = "sale_id")
+    @JoinColumn(name = "sale_id", referencedColumnName = "id")
+    @JsonIgnore
     private Sale sale;
 
     @OneToOne
